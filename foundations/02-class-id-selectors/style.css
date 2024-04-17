@@ -1,5 +1,5 @@
 .odd {
-    background-color: red;
+    background-color: rgb(219, 111, 111);
     font-family: Verdana, DejaVu Sans, sans-serif ;
 }
 
@@ -10,7 +10,7 @@
 
 #second {
     font-size: 36px;
-    color: blue;
+    color: rgb(0, 0, 500);
 }
 
 div {
@@ -19,6 +19,7 @@ div {
 
 #green {
     font-weight: bold;
-    background-color: green;
+    background-color: rgb(152, 255, 152);
     font-size: 24px;
 }
+/* when adding the colors, type in the color then adjust using the slider that comes up */ 
