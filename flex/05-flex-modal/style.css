@@ -20,7 +20,19 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+ 
 }
+/* - adding flex here changes each item from being stacked on each other to having the icon
+squished to the side. Will now try adding flex-shrink to .container
+- Removed flex, button back in normal shape.
+- Adding flex again now that I have but flex-shrink 0 on .icon
+- adding gap here works
+- adding margin to see if it adds space between items. Didnt work
+ */
+
 
 .icon {
   color: royalblue;
@@ -33,7 +45,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  
 }
+/* 
+- Changed justify-content from center to flex start. This did not work, it just off-centered the
+'!'
+- Added margin-right: auto (REMOVED)
+- Added gap - not working, removed and trying on modal
+*/
 
 .close-button {
   background: #eee;
@@ -49,6 +69,8 @@ body {
   border: 1px solid #eee;
   padding: 0;
 }
+/* Changing justify-content from center to flex-end. Did not work, it just off-centered the x
+in the box */
 
 button {
   cursor: pointer;
@@ -67,3 +89,28 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size:larger;
+  margin-bottom: 10px;
+}
+
+.text {
+  margin-bottom: 10px; /* this was last step I needed to complete the task. Had to check
+  solution for it */
+}
+/* - Controls the alignment of the header text and button as well as text size */
+
+
+/* adding gap to .container to see if it will add space between the header, text and buttons.
+So far my solution has not needed this class despite the readme saying that it might be useful.
+Didn't do anything so removed. 
+
+Upon checking the solution, in the index they added the container but didn't use it either?
+Not sure what was going on there
+
+FUTURE SELF - USE MARGIN-BOTTOM TO PUSH SHIT AWAY FROM EACH OTHER!!!!!!!!!
+*/
