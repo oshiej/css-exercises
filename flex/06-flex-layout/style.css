@@ -5,7 +5,12 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
+
+/* Added flex and direction column to body in order to stick the footer to the 
+bottom of the page.  */
 
 img {
   width: 600px;
@@ -23,4 +28,75 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Removes bullets from list
+Set margin and padding to 0 so that the left and ride side of the header/footer are equally spaced */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  
+}
+
+.left-links {
+  display: flex;
+  gap: 12px;
+}
+
+.right-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* putting display: flex on the link classes makes the ul html elements horizontal :) 
+putting gap in here also allows for space between the links */
+
+a:link { 
+  text-decoration: none;
+  color: grey; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+/* found this online to remove the underlines from the links 
+https://blog.hubspot.com/website/remove-underline-from-links-css */
+
+.footer {
+margin-top: auto;
+display: flex;
+justify-content: space-between;
+padding: 12px;
+background-color: #eeeeee;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px;
 }
