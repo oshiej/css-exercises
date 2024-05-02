@@ -4,6 +4,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -21,10 +22,10 @@ body {
   height: 72px;
   background: #eee;
   color: darkmagenta;
-  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .sidebar {
@@ -39,25 +40,55 @@ body {
 }
 
 .tiles {
+  padding: 48px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px;
-  flex-shrink: 1;
+  gap: 32px;
 
 & .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   width: 300px;
-  height: 275px;
+  display: flex;
+  padding: 16px;
   
  
 }
 }
 
+/* Card - Initial solution had height: 275px fixed in card no padding and gap
+Tiles - " " "  gap 10px no padding flex-shrink 1 margin 10px
+
+This worked mostly, but the cards didnt flex
+
+After checking the ODIN soltuion, mine was basically the same, the cards weren't flexing in the way
+I was imagining, I think flex must not work the way I think that it does? idk lol*/
 
 .middle {
   display: flex;
   justify-content: stretch;
+  flex-grow: 2;
+}
+
+a:link { 
+  text-decoration: none; 
+  color: white;
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 10px;
 }
